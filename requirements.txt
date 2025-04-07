@@ -8,3 +8,12 @@ scikit-learn
 pandas
 joblib
 psycopg2-binary
+pydantic-settings
+joblib
+numpy
+scikit-learn
+polars
+xgboost
+lightgbm
+catboost
+shap
