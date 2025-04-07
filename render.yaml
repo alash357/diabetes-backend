@@ -1,0 +1,28 @@
+# render.yaml
+
+services:
+  - type: web
+    name: diabetes-backend
+    runtime: python
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: ./start.sh
+    region: oregon
+    plan: free
+    envVars:
+      - key: ENV
+        value: production
+      - key: DATABASE_URL
+        value: your_postgres_url
+      - key: SECRET_KEY
+        value: your_secret_key
+      - key: ALGORITHM
+        value: HS256
+      - key: ACCESS_TOKEN_EXPIRE_MINUTES
+        value: 60
+      - key: EMAIL_FROM
+        value: admin@yourdomain.com
+      - key: SENDGRID_API_KEY
+        value: your_sendgrid_key
+      - key: FRONTEND_URL
+        value: https://your-frontend.vercel.app
